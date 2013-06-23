@@ -16,6 +16,16 @@ module.exports.reset_profiles = function() {
 	profiles = [];
 };
 
+module.exports.repeats_callback = function(tag, num_loops, callback, is_base) {
+	return function() {
+		var last = undefined;
+		for(var i = 0; i < num_loops; i++) {
+			last = callback();
+		}
+		return last;
+	};
+};
+
 module.exports.record_profile = function(tag, callback, is_base) {
 	var prof = {
 		title: tag,
