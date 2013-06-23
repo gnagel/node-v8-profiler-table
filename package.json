@@ -1,0 +1,25 @@
+{
+    "author": "Glenn Nagel <glenn@mercury-wireless.com>", 
+    "contributors": [], 
+    "dependencies": {"v8-profiler": "*"}, 
+    "description": "Build a table of profiler results, useful for A/B speed testing", 
+    "devDependencies": {
+        "chai": "1.6.1", 
+        "mocha": "1.11.0", 
+        "sprintf": "*",
+				"v8-profiler": "*"
+    }, 
+    "engines": {
+        "node": ">=v0.8.14"
+    }, 
+    "license": "MIT", 
+    "main": "./v8-profiler-table", 
+    "name": "v8-profiler-table", 
+    "repository": {
+        "url": "https://github.com/gnagel/node-v8-profiler-table"
+    }, 
+    "scripts": {
+        "test": "npm install && mocha --recursive --reporter spec ./tests/*.js"
+    }, 
+    "version": "1.0.0"
+}
