@@ -38,6 +38,15 @@ describe('V8-Profiler Table', function() {
 		should.exist(p.profile_base());
 		p.profile_base().title.should.equal('test 2');
 	});
+
+	it('Repeats calback', function() {
+		var i = 0;
+		var c = function() { return (++i).toString(); };
+		
+		var wrapper = p.repeats_callback_wrapper(10, c);
+		wrapper().should.equal("10");
+		i.should.equal(10);
+	});
 });
 // 
 // 

@@ -16,7 +16,7 @@ module.exports.reset_profiles = function() {
 	profiles = [];
 };
 
-module.exports.repeats_callback = function(tag, num_loops, callback, is_base) {
+module.exports.repeats_callback_wrapper = function(num_loops, callback) {
 	return function() {
 		var last = undefined;
 		for(var i = 0; i < num_loops; i++) {
